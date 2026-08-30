@@ -54,7 +54,7 @@ function initCalculator() {
   function calculateEstimate() {
     const destKey = destSelect.value;
     const dest = destinationData[destKey] || destinationData.bali;
-    
+
     let travelers = parseInt(travelersInput.value, 10);
     if (isNaN(travelers) || travelers < 1) travelers = 1;
     if (travelers > 50) travelers = 50;
@@ -94,7 +94,7 @@ function initCalculator() {
 
     // Update UI elements
     if (displayTotal) displayTotal.textContent = formattedTotal;
-    
+
     // Exact requested format from assignment:
     // "Estimated cost for 2 travellers to Bali for 5 days: $2,450 – Standard Travel Package."
     const summaryText = `Estimated cost for ${travelers} traveller${travelers > 1 ? 's' : ''} to ${dest.name} for ${days} days: ${formattedTotal} – ${styleInfo.label}.`;
