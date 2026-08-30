@@ -1,41 +1,73 @@
 /* ==========================================================================
-   WanderLux Travel Agency - Animation Stylesheet
-   Sharp snap appearance with NO fade-in delay or opacity obscuration
+   WanderLux Travel Agency - Scroll Animations
+   Smooth, snappy scroll reveal using Intersection Observer
    Unit: ICT502 - Internet and Web Development
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Section & Card Display (No fade delays, immediate crisp visibility)
+   1. Scroll Reveal Classes (Fast, smooth, and modern)
    -------------------------------------------------------------------------- */
-.reveal, 
-.reveal-left, 
-.reveal-right, 
-.reveal-zoom {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  will-change: opacity, transform;
 }
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 80ms; }
+.delay-200 { transition-delay: 160ms; }
+.delay-300 { transition-delay: 240ms; }
+.delay-400 { transition-delay: 320ms; }
 
 /* --------------------------------------------------------------------------
-   2. Subtle Accent Keyframes (Optional non-fade micro-interactions)
+   2. Accessibility: Reduced Motion
    -------------------------------------------------------------------------- */
-@keyframes greenBorderPulse {
-  0%, 100% {
-    border-color: var(--brand-green);
-  }
-  50% {
-    border-color: var(--accent-yellow);
-  }
-}
-
-.pulse-border {
-  animation: greenBorderPulse 3s infinite;
-}
-
-/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
+  .reveal, .reveal-left, .reveal-right, .reveal-zoom {
+    opacity: 1 !important;
+    transform: none !important;
     transition: none !important;
   }
 }
