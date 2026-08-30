@@ -1,0 +1,163 @@
+/* ==========================================================================
+   WanderLux Travel Agency - Responsive Media Queries
+   Unit: ICT502 - Internet and Web Development
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop & Tablet Landscape (<= 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --space-3xl: 3rem;
+    --space-2xl: 2rem;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-result-side {
+    border-left: none;
+    border-top: 3px solid var(--brand-green);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet Portrait & Large Mobile (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 2.25rem;
+    --space-2xl: 1.5rem;
+  }
+
+  /* Compact Mobile Navigation Drawer */
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 62px; /* Matches compact header height */
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    border-bottom: 3px solid var(--brand-green);
+    flex-direction: column;
+    padding: var(--space-lg) var(--space-md);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 999;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 8px 0;
+    font-size: 0.9375rem;
+  }
+
+  .header-cta {
+    width: 100%;
+    margin-top: var(--space-sm);
+  }
+
+  /* Hero adjustments */
+  .hero-slider-section, .slider-container {
+    min-height: 440px;
+    height: 440px;
+  }
+
+  .slide-content h1 {
+    font-size: 1.85rem;
+  }
+
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .slider-prev { left: 10px; }
+  .slider-next { right: 10px; }
+
+  /* Grids */
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-pill-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Devices (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-slider-section, .slider-container {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .slide-content p {
+    font-size: 0.875rem;
+  }
+
+  .calculator-form-side, .calculator-result-side {
+    padding: var(--space-md);
+  }
+
+  .price-display-box .price-amount {
+    font-size: 2.2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

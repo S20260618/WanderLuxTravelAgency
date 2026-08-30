@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WanderLux Travel Agency - Bespoke luxury travel planning, guided tours, and tailor-made holiday packages worldwide.">
+  <meta name="keywords" content="luxury travel, holiday packages, guided tours, honeymoon packages, travel agency, trip calculator">
+  <meta name="author" content="WanderLux Travel Agency">
+  <title>WanderLux Travel Agency | Bespoke Holiday Planning & Luxury Tours</title>
+  
+    <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== Header & Navigation ==================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="WanderLux Travel Agency Home">
+        <div class="logo-icon">&#9992;</div>
+        Wander<span>Lux</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav class="main-nav" id="main-navigation" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Destinations & Services</a></li>
+          <li><a href="calculator.html" class="nav-link">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html" class="nav-link">Appointment Request</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="calculator.html" class="btn btn-primary header-cta">Estimate Trip</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== Rotating Hero Carousel ==================== -->
+    <section class="hero-slider-section" aria-label="Featured Travel Destinations Carousel">
+      <div class="slider-container">
+        
+        <!-- Slide 1: Tropical Bali -->
+        <div class="slide active" style="background: linear-gradient(rgba(7,21,32,0.65), rgba(7,21,32,0.85)), url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container">
+            <div class="slide-content">
+              <span class="tagline">Bespoke Island Escapes</span>
+              <h1>Discover Tropical Serenity in Bali</h1>
+              <p>Immerse yourself in private oceanfront villas, lush rainforest sanctuaries, and personalised cultural excursions curated by local experts.</p>
+              <div class="slide-cta-group">
+                <a href="services.html" class="btn btn-primary btn-lg">Explore Packages</a>
+                <a href="calculator.html" class="btn btn-outline-white btn-lg">Calculate Trip Cost</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Romantic Paris -->
+        <div class="slide" style="background: linear-gradient(rgba(7,21,32,0.65), rgba(7,21,32,0.85)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container">
+            <div class="slide-content">
+              <span class="tagline">Romantic European Getaways</span>
+              <h1>Unveil the Timeless Charm of Paris</h1>
+              <p>Experience world-class culinary masterclasses, private Louvre viewings, and boutique five-star accommodations in the City of Light.</p>
+              <div class="slide-cta-group">
+                <a href="services.html" class="btn btn-primary btn-lg">View Honeymoon Specials</a>
+                <a href="appointment.html" class="btn btn-outline-white btn-lg">Book Consultant</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Dynamic Tokyo -->
+        <div class="slide" style="background: linear-gradient(rgba(7,21,32,0.65), rgba(7,21,32,0.85)), url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container">
+            <div class="slide-content">
+              <span class="tagline">Cultural Expeditions</span>
+              <h1>Tradition Meets Modernity in Tokyo</h1>
+              <p>Journey through historic temples, scenic Mount Fuji landscapes, and Michelin-starred dining on an unforgettable guided tour.</p>
+              <div class="slide-cta-group">
+                <a href="services.html" class="btn btn-primary btn-lg">View Guided Tours</a>
+                <a href="calculator.html" class="btn btn-outline-white btn-lg">Plan Your Budget</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button class="slider-arrow slider-prev" aria-label="Previous destination slide">&#10094;</button>
+        <button class="slider-arrow slider-next" aria-label="Next destination slide">&#10095;</button>
+
+        <div class="slider-dots" role="tablist" aria-label="Carousel pagination">
+          <button class="dot active" role="tab" aria-label="Slide 1: Bali"></button>
+          <button class="dot" role="tab" aria-label="Slide 2: Paris"></button>
+          <button class="dot" role="tab" aria-label="Slide 3: Tokyo"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== Agency Intro & Highlights ==================== -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="section-badge">Welcome to WanderLux</span>
+          <h2 class="section-title">Elevating Travel into Unforgettable Journeys</h2>
+          <p class="section-subtitle">We craft seamless, customised travel packages tailored to your distinct lifestyle, preferences, and desires.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-box reveal delay-100">
+            <div class="feature-icon">&#9733;</div>
+            <h3>Bespoke Itineraries</h3>
+            <p>Every journey is uniquely designed around your schedule, budget, and personal travel bucket list.</p>
+          </div>
+
+          <div class="feature-box reveal delay-200">
+            <div class="feature-icon">&#128717;</div>
+            <h3>5-Star Luxury Stays</h3>
+            <p>Exclusive partnerships with premier boutique resorts, private villas, and high-end hotel chains.</p>
+          </div>
+
+          <div class="feature-box reveal delay-300">
+            <div class="feature-icon">&#128101;</div>
+            <h3>Expert Local Guides</h3>
+            <p>Immerse yourself in authentic local heritage with certified multilingual tour curators.</p>
+          </div>
+
+          <div class="feature-box reveal delay-400">
+            <div class="feature-icon">&#128737;</div>
+            <h3>24/7 Global Concierge</h3>
+            <p>Round-the-clock support and real-time itinerary management wherever you are in the world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Featured Travel Packages ==================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="section-badge">Signature Collections</span>
+          <h2 class="section-title">Featured Holiday Packages</h2>
+          <p class="section-subtitle">Handcrafted escapes offering the perfect blend of leisure, adventure, and supreme comfort.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Package 1 -->
+          <article class="card reveal delay-100">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80" alt="Lush Ubud rainforest villa in Bali" class="card-img" loading="lazy">
+              <span class="card-badge">Popular</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>&#128197; 7 Days / 6 Nights</span>
+                <span>&#128205; Bali, Indonesia</span>
+              </div>
+              <h3>Bali Island Bliss & Culture</h3>
+              <p>Experience private infinity pool villas in Seminyak, sacred monkey forest tours in Ubud, and authentic Balinese culinary retreats.</p>
+              <div class="card-footer">
+                <div class="card-price">From $1,850 <span>/ person</span></div>
+                <a href="calculator.html" class="btn btn-outline">Estimate</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 2 -->
+          <article class="card reveal delay-200">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80" alt="Eiffel tower illuminated at sunset in Paris" class="card-img" loading="lazy">
+              <span class="card-badge">Romantic</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>&#128197; 8 Days / 7 Nights</span>
+                <span>&#128205; Paris, France</span>
+              </div>
+              <h3>Parisian Romance & Haute Cuisine</h3>
+              <p>Private Seine river sunset cruise, VIP Louvre access, pastry masterclass, and deluxe hotel accommodation near the Champs-Élysées.</p>
+              <div class="card-footer">
+                <div class="card-price">From $2,890 <span>/ person</span></div>
+                <a href="calculator.html" class="btn btn-outline">Estimate</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 3 -->
+          <article class="card reveal delay-300">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=700&q=80" alt="Overwater bungalow in Maldives crystal clear lagoon" class="card-img" loading="lazy">
+              <span class="card-badge">Luxury VIP</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span>&#128197; 6 Days / 5 Nights</span>
+                <span>&#128205; Maldives Atolls</span>
+              </div>
+              <h3>Maldives Overwater Haven</h3>
+              <p>All-inclusive overwater luxury villa with private butler, sunset dolphin cruises, coral reef snorkelling, and holistic spa treatments.</p>
+              <div class="card-footer">
+                <div class="card-price">From $3,450 <span>/ person</span></div>
+                <a href="calculator.html" class="btn btn-outline">Estimate</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-2xl);">
+          <a href="services.html" class="btn btn-navy btn-lg">View All Travel Services & Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Quick Interactive Teaser ==================== -->
+    <section class="section-padding bg-primary-dark">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div class="reveal-left">
+            <span class="section-badge">Instant Estimation</span>
+            <h2 style="color: white;">Plan Your Dream Trip Within Your Budget</h2>
+            <p style="color: #cbd5e1;">Curious about how much your dream getaway will cost? Use our interactive <strong>Trip Cost Calculator</strong> to receive real-time cost breakdowns tailored to your group size, length of stay, and travel style.</p>
+            <ul style="color: #cbd5e1; margin-bottom: var(--space-xl);">
+              <li style="margin-bottom: 8px;">&#10003; Real-time calculation based on live destination rates</li>
+              <li style="margin-bottom: 8px;">&#10003; Customise by Budget, Standard, or Luxury styles</li>
+              <li style="margin-bottom: 8px;">&#10003; Seamlessly book an appointment with your saved quote</li>
+            </ul>
+            <a href="calculator.html" class="btn btn-primary btn-lg">Launch Trip Calculator</a>
+          </div>
+          <div class="reveal-right text-center">
+            <div style="background: rgba(255,255,255,0.08); padding: var(--space-2xl);  border: 1px solid rgba(255,255,255,0.15);">
+              <h3 style="color: var(--brand-green); margin-bottom: var(--space-sm);">Sample Quick Quote</h3>
+              <p style="font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: var(--space-xs);">$2,450</p>
+              <p style="color: #94a3b8; font-size: var(--font-size-sm); margin-bottom: var(--space-lg);">2 Travellers to Bali for 5 Days (Standard Style)</p>
+              <a href="calculator.html" class="btn btn-outline-white">Calculate My Custom Trip</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Agency Key Statistics ==================== -->
+    <section class="stats-banner">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="reveal delay-100">
+            <div class="stat-number">12,500+</div>
+            <div class="stat-label">Happy Travellers</div>
+          </div>
+          <div class="reveal delay-200">
+            <div class="stat-number">98.6%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="reveal delay-300">
+            <div class="stat-number">85+</div>
+            <div class="stat-label">Global Destinations</div>
+          </div>
+          <div class="reveal delay-400">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Client Testimonials ==================== -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="section-badge">Client Testimonials</span>
+          <h2 class="section-title">What Our Travellers Say</h2>
+          <p class="section-subtitle">Read real feedback from clients who explored the world with WanderLux.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="testimonial-card reveal delay-100">
+            <p>“WanderLux planned our 10th anniversary trip to Paris and Rome. Everything from the private museum tours to the rooftop dinners was pure perfection. Truly a 5-star service!”</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Sarah & Mark Jenkins</div>
+                <div class="author-location">Melbourne, Australia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal delay-200">
+            <p>“The Trip Cost Calculator gave us an exact budget for our family vacation to Japan. The consultant accommodated all our requests seamlessly. We will definitely book with them again.”</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David Chen" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">David Chen</div>
+                <div class="author-location">Sydney, Australia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal delay-300">
+            <p>“Our Maldives honeymoon was an absolute dream. WanderLux secured us complimentary upgrades and ensured 24/7 support throughout. Best travel agency experience by far.”</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Elena & Liam Watson</div>
+                <div class="author-location">Brisbane, Australia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Call to Action Banner ==================== -->
+    <section class="section-padding text-center bg-primary-dark">
+      <div class="container reveal">
+        <h2 style="color: white; margin-bottom: var(--space-sm);">Ready to Embark on Your Next Adventure?</h2>
+        <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto var(--space-xl) auto;">Schedule a one-on-one consultation with our bespoke travel designers and turn your dream vacation into reality.</p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="appointment.html" class="btn btn-primary btn-lg">Book Consultation</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Our Office</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>WanderLux Travel Agency</h4>
+          <p>Your premier destination for tailor-made luxury holidays, curated guided expeditions, and seamless international journeys.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">&#102;</a>
+            <a href="#" class="social-icon" aria-label="Instagram">&#9825;</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">&#105;</a>
+            <a href="#" class="social-icon" aria-label="Twitter">&#120;</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Destinations & Services</a></li>
+            <li><a href="calculator.html">Trip Cost Calculator</a></li>
+            <li><a href="appointment.html">Appointment Request</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#holiday-packages">Holiday Packages</a></li>
+            <li><a href="services.html#guided-tours">Guided Tours</a></li>
+            <li><a href="services.html#flights-hotels">Flights & Hotels</a></li>
+            <li><a href="services.html#honeymoon">Honeymoon Specials</a></li>
+            <li><a href="appointment.html">Private Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p>Subscribe for exclusive travel offers, destination guides, and luxury insider tips.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to WanderLux Travel Newsletter!');">
+            <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> WanderLux Travel Agency. All rights reserved. ICT502 Assessment 2 Project.</p>
+        <p>Built with Semantic HTML5, Modern CSS3, & Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

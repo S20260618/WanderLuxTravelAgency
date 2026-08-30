@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate and estimate your holiday costs with WanderLux's interactive Trip Cost Calculator. Customise destination, travellers, duration, and luxury travel style.">
+  <meta name="keywords" content="trip cost calculator, travel budget planner, vacation estimator, WanderLux holiday cost, travel quote">
+  <meta name="author" content="WanderLux Travel Agency">
+  <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+  
+    <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== Header & Navigation ==================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="WanderLux Travel Agency Home">
+        <div class="logo-icon">&#9992;</div>
+        Wander<span>Lux</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav class="main-nav" id="main-navigation" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Destinations & Services</a></li>
+          <li><a href="calculator.html" class="nav-link active">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html" class="nav-link">Appointment Request</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="calculator.html" class="btn btn-primary header-cta">Estimate Trip</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== Page Hero ==================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-badge">Real-Time Estimator</span>
+        <h1>Interactive Trip Cost Calculator</h1>
+        <p>Select your dream destination, customize group size and travel duration, and choose your preferred travel tier to generate an instant estimate.</p>
+      </div>
+    </section>
+
+    <!-- ==================== Calculator Main Section ==================== -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        
+        <div class="calculator-wrapper reveal">
+          <div class="calculator-grid">
+            
+            <!-- Left Side: Interactive Input Form -->
+            <div class="calculator-form-side">
+              <h2 style="font-size: 1.75rem; margin-bottom: 8px;">Trip Parameters</h2>
+              <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--space-xl);">
+                Adjust the sliders and options below to customize your travel package.
+              </p>
+
+              <form id="trip-calculator-form">
+                
+                <!-- Destination Selection -->
+                <div class="form-group">
+                  <label for="calc-destination" class="form-label">
+                    <span>&#128205;</span> Destination <span class="required">*</span>
+                  </label>
+                  <select id="calc-destination" class="form-control" aria-label="Select Destination">
+                    <option value="bali" selected>Bali, Indonesia (Tropical Island)</option>
+                    <option value="paris">Paris, France (Romantic Heritage)</option>
+                    <option value="tokyo">Tokyo, Japan (Modern & Cultural)</option>
+                    <option value="maldives">Maldives Overwater Resort (Luxury Island)</option>
+                    <option value="rome">Rome, Italy (Historical Renaissance)</option>
+                    <option value="queenstown">Queenstown, New Zealand (Alpine Adventure)</option>
+                    <option value="newyork">New York, USA (Metropolitan Grand)</option>
+                    <option value="goldcoast">Gold Coast, Australia (Coastal Sun)</option>
+                  </select>
+                </div>
+
+                <!-- Number of Travellers & Duration (Row) -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="calc-travelers" class="form-label">
+                      <span>&#128101;</span> Travellers <span class="required">*</span>
+                    </label>
+                    <input type="number" id="calc-travelers" class="form-control" value="2" min="1" max="30" step="1" required aria-label="Number of travellers">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="calc-days" class="form-label">
+                      <span>&#128197;</span> Duration (Days) <span class="required">*</span>
+                    </label>
+                    <input type="number" id="calc-days" class="form-control" value="5" min="1" max="90" step="1" required aria-label="Number of days">
+                  </div>
+                </div>
+
+                <!-- Travel Style Radio Selection -->
+                <div class="form-group">
+                  <label class="form-label">
+                    <span>&#9733;</span> Travel Style / Tier <span class="required">*</span>
+                  </label>
+                  <div class="radio-pill-group">
+                    <div>
+                      <input type="radio" id="style-budget" name="calc-style" value="budget" class="radio-pill-input">
+                      <label for="style-budget" class="radio-pill-label">
+                        <span class="radio-pill-title">Budget</span>
+                        <span class="radio-pill-desc">3-Star Boutique</span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" id="style-standard" name="calc-style" value="standard" class="radio-pill-input" checked>
+                      <label for="style-standard" class="radio-pill-label">
+                        <span class="radio-pill-title">Standard</span>
+                        <span class="radio-pill-desc">4-Star Deluxe</span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" id="style-luxury" name="calc-style" value="luxury" class="radio-pill-input">
+                      <label for="style-luxury" class="radio-pill-label">
+                        <span class="radio-pill-title">Luxury VIP</span>
+                        <span class="radio-pill-desc">5-Star Elite</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Optional Add-ons -->
+                <div class="form-group" style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); margin-top: var(--space-md);">
+                  <label class="form-label">Optional Add-on Inclusions</label>
+                  
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+                    <label style="display: flex; align-items: center; gap: 10px; font-size: var(--font-size-sm); cursor: pointer;">
+                      <input type="checkbox" id="calc-flights" style="width: 18px; height: 18px; accent-color: var(--brand-green);">
+                      <span>Include Estimated Round-Trip Airfare</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; font-size: var(--font-size-sm); cursor: pointer;">
+                      <input type="checkbox" id="calc-insurance" style="width: 18px; height: 18px; accent-color: var(--brand-green);">
+                      <span>Include Comprehensive Travel Insurance Protection ($18/day/person)</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div style="margin-top: var(--space-lg);">
+                  <button type="submit" class="btn btn-navy btn-block">Recalculate Estimate</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right Side: Real-time Calculation Result -->
+            <div class="calculator-result-side">
+              <div>
+                <div class="result-card-header">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Estimated Trip Quote</h3>
+                    <span class="result-badge">Instant Estimate</span>
+                  </div>
+                  <p style="font-size: var(--font-size-xs); color: #94a3b8; margin-top: 4px;">Dynamic estimate based on current seasonal rates</p>
+                </div>
+
+                <!-- Grand Total Display Box -->
+                <div class="price-display-box">
+                  <div class="price-label">Total Estimated Cost</div>
+                  <div class="price-amount" id="display-total-cost">$2,450</div>
+                  <div class="price-subtext">All taxes & estimated inclusions included (AUD)</div>
+                </div>
+
+                <!-- Exact Assignment Formatted Summary Statement -->
+                <div class="result-summary-note" id="display-summary-note">
+                  Estimated cost for 2 travellers to Bali, Indonesia for 5 days: $2,450 – Standard Travel Package.
+                </div>
+
+                <!-- Breakdown Breakdown -->
+                <div class="breakdown-list">
+                  <div class="breakdown-item">
+                    <span>Destination:</span>
+                    <strong id="breakdown-dest">Bali, Indonesia</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Group Size:</span>
+                    <strong id="breakdown-travelers">2 Persons</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Duration:</span>
+                    <strong id="breakdown-days">5 Days</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Tier & Multiplier:</span>
+                    <strong id="breakdown-style">Standard (1.0x)</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Daily Activities & Food:</span>
+                    <strong id="breakdown-daily-base">$1,100</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Accommodation Base:</span>
+                    <strong id="breakdown-accom">$1,350</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Optional Inclusions:</span>
+                    <strong id="breakdown-addons">$0</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <a href="appointment.html" id="btn-book-quote" class="btn btn-primary btn-block btn-lg" style="box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                  Book Consultation With This Quote &rarr;
+                </a>
+                <p style="text-align: center; font-size: var(--font-size-xs); color: #94a3b8; margin-top: 10px; margin-bottom: 0;">
+                  No upfront payment required. Rates subject to final confirmation.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== How It Works Info ==================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="section-badge">Transparent Pricing</span>
+          <h2 class="section-title">How WanderLux Estimates Your Trip</h2>
+          <p class="section-subtitle">Our transparent pricing model calculates daily expenses, premier accommodations, and seasonal multipliers.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-box reveal delay-100">
+            <div class="feature-icon">&#128200;</div>
+            <h3>1. Base Destination Rates</h3>
+            <p>Every destination has indexed daily baseline costs for meals, local transportation, and cultural activities derived from live market rates.</p>
+          </div>
+
+          <div class="feature-box reveal delay-200">
+            <div class="feature-icon">&#127976;</div>
+            <h3>2. Dynamic Rooming Math</h3>
+            <p>Accommodations are calculated per room required based on party size (twin-share basis), ensuring accurate room budgeting.</p>
+          </div>
+
+          <div class="feature-box reveal delay-300">
+            <div class="feature-icon">&#9878;</div>
+            <h3>3. Travel Tier Multipliers</h3>
+            <p>Tiers scale from affordable comfort in Budget, deluxe 4-star packages in Standard, up to VIP 5-star private experiences in Luxury.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>WanderLux Travel Agency</h4>
+          <p>Your premier destination for tailor-made luxury holidays, curated guided expeditions, and seamless international journeys.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">&#102;</a>
+            <a href="#" class="social-icon" aria-label="Instagram">&#9825;</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">&#105;</a>
+            <a href="#" class="social-icon" aria-label="Twitter">&#120;</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Destinations & Services</a></li>
+            <li><a href="calculator.html">Trip Cost Calculator</a></li>
+            <li><a href="appointment.html">Appointment Request</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#holiday-packages">Holiday Packages</a></li>
+            <li><a href="services.html#guided-tours">Guided Tours</a></li>
+            <li><a href="services.html#flights-hotels">Flights & Hotels</a></li>
+            <li><a href="services.html#honeymoon">Honeymoon Specials</a></li>
+            <li><a href="appointment.html">Private Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p>Subscribe for exclusive travel offers, destination guides, and luxury insider tips.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to WanderLux Travel Newsletter!');">
+            <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> WanderLux Travel Agency. All rights reserved. ICT502 Assessment 2 Project.</p>
+        <p>Built with Semantic HTML5, Modern CSS3, & Vanilla JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>

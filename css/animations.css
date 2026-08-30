@@ -1,0 +1,41 @@
+/* ==========================================================================
+   WanderLux Travel Agency - Animation Stylesheet
+   Sharp snap appearance with NO fade-in delay or opacity obscuration
+   Unit: ICT502 - Internet and Web Development
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Section & Card Display (No fade delays, immediate crisp visibility)
+   -------------------------------------------------------------------------- */
+.reveal, 
+.reveal-left, 
+.reveal-right, 
+.reveal-zoom {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Subtle Accent Keyframes (Optional non-fade micro-interactions)
+   -------------------------------------------------------------------------- */
+@keyframes greenBorderPulse {
+  0%, 100% {
+    border-color: var(--brand-green);
+  }
+  50% {
+    border-color: var(--accent-yellow);
+  }
+}
+
+.pulse-border {
+  animation: greenBorderPulse 3s infinite;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
